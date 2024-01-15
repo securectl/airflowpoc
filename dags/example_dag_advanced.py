@@ -8,7 +8,7 @@ from airflow.decorators import (
 
 
 # When using the DAG decorator, The "dag_id" value defaults to the name of the function
-# it is decorating if not explicitly set. In this example, the "dag_id" value would be "example_dag_basic".
+# it is decorating if not explicitly set. In this example, the "dag_id" value would be "example_dag_advanced".
 @dag(
     # This defines how often your DAG will run, or the schedule by which your DAG runs. In this case, this DAG
     # will run daily
@@ -25,7 +25,7 @@ from airflow.decorators import (
     },
     tags=["example"],
 )  # If set, this tag is shown in the DAG view of the Airflow UI
-def example_dag_basic():
+def example_dag_advanced():
     """
     ### Basic ETL Dag
     This is a simple ETL data pipeline example that demonstrates the use of
@@ -78,4 +78,4 @@ def example_dag_basic():
     load(order_summary["total_order_value"])
 
 
-example_dag_basic()
+example_dag_advanced()
